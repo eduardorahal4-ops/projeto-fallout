@@ -2,11 +2,17 @@ package dev.java10x.Fallout.Fallout.Controller.surfice;
 
 import dev.java10x.Fallout.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_fallout")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class FalloutModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,28 +24,6 @@ public class FalloutModel {
     private MissoesModel missoes;
 
 
-    public FalloutModel() {
 
-    }
 
-    public FalloutModel(String nome, int idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
 }
