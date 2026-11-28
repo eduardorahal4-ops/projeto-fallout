@@ -1,4 +1,4 @@
-package dev.java10x.Fallout;
+package dev.java10x.Fallout.Fallout.Controller.surfice;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

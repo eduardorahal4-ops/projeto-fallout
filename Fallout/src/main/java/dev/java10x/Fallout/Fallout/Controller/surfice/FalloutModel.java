@@ -1,6 +1,9 @@
-package dev.java10x.Fallout;
+package dev.java10x.Fallout.Fallout.Controller.surfice;
 
+import dev.java10x.Fallout.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_fallout")
@@ -10,6 +13,9 @@ public class FalloutModel {
     private Long id;
     private String nome;
     private int idade;
+    @ManyToOne
+    @JoinColumn(name = "missoes_id")
+    private MissoesModel missoes;
 
 
     public FalloutModel() {
